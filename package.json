@@ -1,6 +1,6 @@
 {
   "name": "mongoose-ownable",
-  "description": "a mongoose plugin adding ablity to model instance to be trashed (soft deleted) / untrashed",
+  "description": "a mongoose plugin adding owner_id to model instance and findByIdAndOwnerId static methods",
   "version": "0.1.1",
   "homepage": "https://github.com/yi/mongoose-ownable",
   "author": {
