@@ -1,0 +1,35 @@
+{
+  "name": "mongoose-ownable",
+  "description": "a mongoose plugin adding ablity to model instance to be trashed (soft deleted) / untrashed",
+  "version": "0.1.1",
+  "homepage": "https://github.com/yi/mongoose-ownable",
+  "author": {
+    "name": "yi",
+    "email": "yi2004@gmail.com",
+    "url": "https://github.com/yi/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yi/mongoose-ownable.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yi/mongoose-ownable/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/yi/mongoose-ownable/blob/master/LICENSE"
+    }
+  ],
+  "main": "lib/mongoose-ownable",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "watch": "coffee -o ./lib/ -cw ./src/",
+    "test": "mocha test"
+  },
+  "devDependencies": {
+  },
+  "keywords": ["mongoose", "mongodb", "model", "user", "owner"]
+}
