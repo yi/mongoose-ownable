@@ -11,7 +11,11 @@ assert = require "assert"
 # mongoose-times plugin method
 module.exports = exports  = (schema)->
 
-  schema.add owner_id:String
+  schema.add
+    owner_id:
+      type : String
+      trim: true
+      require:true
 
   # find a doc by id and insure it's owned by owner id
   # @param {String} id
@@ -30,6 +34,16 @@ module.exports = exports  = (schema)->
       return callback( new Error("#{id} permission denied")) unless item.owner_id is ownerId
       return callback(null, item)
     return
+
+
+  schema.statics['findAllByOwnerId'] = (ownerId, callback)->
+
+    assert(('function' is typeof callback), "missing callback")
+
+    unless ('string' is typeof ownerId) and ownerId
+      return callback(new Error("bad arguments. ownerId:#{ownerId}"))
+
+    this.find owner_id:ownerId, callback
 
   return
 
