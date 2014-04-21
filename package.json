@@ -1,7 +1,7 @@
 {
   "name": "mongoose-ownable",
   "description": "a mongoose plugin adding owner_id to model instance and findByIdAndOwnerId static methods",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://github.com/yi/mongoose-ownable",
   "author": {
     "name": "yi",

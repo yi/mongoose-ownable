@@ -44,6 +44,20 @@ module.exports = exports  = (schema)->
       return callback(new Error("bad arguments. ownerId:#{ownerId}"))
 
     this.find owner_id:ownerId, callback
+    return
+
+  schema.statics['countByOwnerId'] = (ownerId, callback)->
+
+    assert(('function' is typeof callback), "missing callback")
+
+    unless ('string' is typeof ownerId) and ownerId
+      return callback(new Error("bad arguments. ownerId:#{ownerId}"))
+
+    this.count owner_id:ownerId, callback
+
+
+
+
 
   return
 
